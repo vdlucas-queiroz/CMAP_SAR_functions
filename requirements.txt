@@ -1,0 +1,32 @@
+# =============================================================================
+# Projeto CMAP — dependências Python
+# Versões exatas com que TODO o pacote, os notebooks e os testes foram executados
+# (Python 3.12.3). Instalação:   pip install -r requirements.txt
+# =============================================================================
+
+# --- Cálculo e tabelas ---------------------------------------------------------
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1            # distribuições, KS, Bessel, otimização, agrupamento hierárquico
+
+# --- Dados geoespaciais --------------------------------------------------------
+rasterio==1.5.2          # leitura/gravação de GeoTIFF (inclui GDAL nas wheels do pip)
+geopandas==1.2.0         # polígonos e pontos de amostra (shapefile, GeoPackage)
+shapely==2.1.2           # geometrias
+pyogrio==0.13.0          # motor de leitura/gravação de vetores usado pelo geopandas
+pyproj==3.8.0            # sistemas de referência (reprojeção de pontos/polígonos)
+
+# --- Gráficos e planilhas ------------------------------------------------------
+matplotlib==3.10.8       # todos os gráficos e o PDF de figuras
+openpyxl==3.1.5          # gravação/leitura das planilhas .xlsx de resultados
+
+# --- Jupyter -------------------------------------------------------------------
+jupyterlab               # interface para os notebooks (ou: notebook)
+ipykernel==7.4.0         # kernel Python dos notebooks
+
+# --- Opcional: executar notebooks por script (não necessário para uso normal) --
+# nbformat==5.11.1
+# nbclient==0.11.0
+
+# --- Fora do pip: R, apenas para a pasta testes/ (comparação com os originais) --
+# R >= 4.3 com os pacotes: caret, dplyr, reshape2, fitdistrplus, raster, sp, sf, terra

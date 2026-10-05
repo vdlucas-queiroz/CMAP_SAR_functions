@@ -1,0 +1,237 @@
+{
+  "_LEIA": [
+    "Configuração única dos notebooks 01, 02 e 03. Itens marcados 'CONFIRMAR' foram deduzidos dos scripts e precisam ser conferidos.",
+    "imagens.<data>.bandas = ordem REAL das bandas no arquivo (a imagem de 2008 está em HV, HH; a de 2010 em HH, HV).",
+    "classes = ordem dos códigos 1..K do raster de amostras (class_names dos scripts R).",
+    "Em cenarios, '{resultados}' é substituído por raiz_resultados.",
+    "Cenário: use 'tabela_trajetorias' (tabela pronta do R, ex.: pesos_C4_C5.txt) OU 'transicoes' (lista de matrizes com rótulos)."
+  ],
+  "raiz_resultados": "G:/Meu Drive/INPE/projeto_dissertacao/resultados_python",
+  "classes": [
+    "AP",
+    "AC",
+    "FD",
+    "FP",
+    "PL",
+    "PS",
+    "SE",
+    "VS1",
+    "VS2",
+    "VS3"
+  ],
+  "niveis_hierarquicos": {
+    "lvl_1": [
+      [
+        "VS1",
+        "VS2",
+        "VS3"
+      ]
+    ],
+    "lvl_2": [
+      [
+        "FP",
+        "FD"
+      ],
+      [
+        "VS1",
+        "VS2",
+        "VS3"
+      ],
+      [
+        "AP",
+        "AC"
+      ],
+      [
+        "PL",
+        "PS"
+      ]
+    ]
+  },
+  "legenda_final": {
+    "AP+AC": "AG",
+    "PL+PS": "PA",
+    "VS1+VS2+VS3": "VS",
+    "FP+FD": "F",
+    "SE": "SE"
+  },
+  "imagens": {
+    "2008": {
+      "sensor": "SAR",
+      "imagem": "G:/Meu Drive/INPE/projeto_dissertacao/0_images/1_processed_images/0_SAR/2008/REC_2008_ALPSRP127347120_Cal_ML_Spk3_DSk_TC_modificado_aligned.TIF",
+      "bandas": [
+        "HV",
+        "HH"
+      ],
+      "raster_amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/raster/amostras_total_2008_10classes_aligned.tif",
+      "poligonos_amostras": "CONFIRMAR: shapefile de polígonos de amostra de 2008 (não aparece nos scripts)",
+      "coluna_classe_poligonos": "Classe",
+      "nomes_poligonos": {
+        "CL": "AC",
+        "SS1": "VS1",
+        "SS2": "VS2",
+        "SS3": "VS3"
+      }
+    },
+    "2010": {
+      "sensor": "SAR",
+      "imagem": "G:/Meu Drive/INPE/projeto_dissertacao/0_images/1_processed_images/0_SAR/2010/REC_2010_ALPSRP234707120_Cal_ML_Spk3_DSk_TC_modificado_aligned.TIF",
+      "bandas": [
+        "HH",
+        "HV"
+      ],
+      "raster_amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/raster/amostras_total_2010_10classes_aligned.TIF",
+      "poligonos_amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/Amostras/amostras_2010.shp",
+      "coluna_classe_poligonos": "Classe",
+      "nomes_poligonos": {
+        "CL": "AC",
+        "SS1": "VS1",
+        "SS2": "VS2",
+        "SS3": "VS3"
+      }
+    }
+  },
+  "_CONFIRMAR_nomes_poligonos": "No correlation_2.ipynb os polígonos usam AP, CL, FD, FP, PL, PS, SE, SS1, SS2, SS3; nos scripts R as classes são AP, AC, FD, FP, PL, PS, SE, VS1, VS2, VS3. A correspondência CL=AC e SSk=VSk foi DEDUZIDA.",
+  "_CONFIRMAR_classes_bandas_opticas": "Ordem das bandas das verossimilhanças ópticas deduzida de CMAP_Assessment (class_dict: 1=AP+AC, 2=VS3, 3=SE, 4=FP, 5=VS1, 6=PL+PS -> AG, VS3, SE, F, VS1, PA). O mesmo vale para o campo DN dos polígonos de validação.",
+  "cenarios": {
+    "C2_par_intensidade": {
+      "datas": {
+        "2005": {
+          "verossimilhanca": "G:/Meu Drive/INPE/projeto_dissertacao/6_cenarios/resultados_C3/likelihoods_2005_resampled.TIF",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": "G:/Meu Drive/INPE/projeto_dissertacao/0_images/3_cloud_mask/rec_cloud_mask_2005_resampled.TIF",
+          "validacao": {
+            "arquivo": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/vector/polygons/test/test_samples_2005_clipped.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        },
+        "2006": {
+          "verossimilhanca": "G:/Meu Drive/INPE/projeto_dissertacao/6_cenarios/resultados_C3/likelihoods_2006_resampled.TIF",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": "G:/Meu Drive/INPE/projeto_dissertacao/0_images/3_cloud_mask/rec_cloud_mask_2006_resampled.TIF",
+          "validacao": {
+            "arquivo": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/vector/polygons/test/test_samples_2006_clipped.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        },
+        "2007": {
+          "verossimilhanca": "G:/Meu Drive/INPE/projeto_dissertacao/6_cenarios/resultados_C3/likelihoods_2007_resampled.TIF",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": "G:/Meu Drive/INPE/projeto_dissertacao/0_images/3_cloud_mask/rec_cloud_mask_2007_resampled.TIF",
+          "validacao": {
+            "arquivo": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/vector/polygons/test/test_samples_2007_clipped.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        },
+        "2008": {
+          "verossimilhanca": "{resultados}/2008/verossimilhanca/par_intensidade.tif",
+          "tipo": "log",
+          "classes_bandas": null,
+          "mascara": null,
+          "validacao": {
+            "arquivo": "{resultados}/2008/amostras.gpkg",
+            "camada": "validacao",
+            "tipo": "pontos",
+            "coluna": "class_name"
+          },
+          "agregacao": "lvl_2"
+        },
+        "2009": {
+          "verossimilhanca": "G:/Meu Drive/INPE/projeto_dissertacao/6_cenarios/resultados_C3/likelihoods_2009_resampled.TIF",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": "G:/Meu Drive/INPE/projeto_dissertacao/0_images/3_cloud_mask/rec_cloud_mask_2009_resampled.TIF",
+          "validacao": {
+            "arquivo": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/vector/polygons/test/test_samples_2009_clipped.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        },
+        "2010": {
+          "verossimilhanca": "{resultados}/2010/verossimilhanca/par_intensidade.tif",
+          "tipo": "log",
+          "classes_bandas": null,
+          "mascara": null,
+          "validacao": {
+            "arquivo": "{resultados}/2010/amostras.gpkg",
+            "camada": "validacao",
+            "tipo": "pontos",
+            "coluna": "class_name"
+          },
+          "agregacao": "lvl_2"
+        }
+      },
+      "tabela_trajetorias": "G:/Meu Drive/INPE/projeto_dissertacao/7_CMAP/C4_C5/pesos_C4_C5.txt",
+      "transicoes": null
+    }
+  }
+}

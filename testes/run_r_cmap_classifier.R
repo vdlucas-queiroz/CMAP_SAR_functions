@@ -1,0 +1,7 @@
+suppressMessages({library(raster); library(terra)})
+e <- parse(text = gsub("\r", "", readLines('originais_CMAP_C4_C5.R')))
+for (x in e) if (is.call(x) && as.character(x[[1]]) %in% c("<-", "=") && is.call(x[[3]]) && identical(x[[3]][[1]], as.name("function"))) eval(x, globalenv())
+tw <- read.table('pesos.txt', sep = ';', h = TRUE)
+dir.create('R_out', showWarnings = FALSE)
+invisible(capture.output(CMAP_classifier(c('lik1.tif', 'lik2.tif', 'lik3.tif'), tw, 'R_out/', masking = c('mask1.tif', '0', 'mask3.tif'), sufix = 'teste')))
+cat('R ok\n')

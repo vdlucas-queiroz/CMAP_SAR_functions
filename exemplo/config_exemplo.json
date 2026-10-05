@@ -1,0 +1,228 @@
+{
+  "raiz_resultados": "/home/claude/projeto/exemplo/resultados",
+  "classes": [
+    "AP",
+    "AC",
+    "FD",
+    "FP",
+    "PL",
+    "PS",
+    "SE",
+    "VS1",
+    "VS2",
+    "VS3"
+  ],
+  "niveis_hierarquicos": {
+    "lvl_1": [
+      [
+        "VS1",
+        "VS2",
+        "VS3"
+      ]
+    ],
+    "lvl_2": [
+      [
+        "FP",
+        "FD"
+      ],
+      [
+        "VS1",
+        "VS2",
+        "VS3"
+      ],
+      [
+        "AP",
+        "AC"
+      ],
+      [
+        "PL",
+        "PS"
+      ]
+    ]
+  },
+  "legenda_final": {
+    "AP+AC": "AG",
+    "PL+PS": "PA",
+    "VS1+VS2+VS3": "VS",
+    "FP+FD": "F",
+    "SE": "SE"
+  },
+  "imagens": {
+    "2008": {
+      "sensor": "SAR",
+      "imagem": "/home/claude/projeto/exemplo/dados/SAR_2008.tif",
+      "bandas": [
+        "HV",
+        "HH"
+      ],
+      "raster_amostras": "/home/claude/projeto/exemplo/dados/amostras_total_2008_10classes.tif",
+      "poligonos_amostras": "/home/claude/projeto/exemplo/dados/amostras_2008.shp",
+      "coluna_classe_poligonos": "Classe",
+      "nomes_poligonos": {}
+    },
+    "2010": {
+      "sensor": "SAR",
+      "imagem": "/home/claude/projeto/exemplo/dados/SAR_2010.tif",
+      "bandas": [
+        "HH",
+        "HV"
+      ],
+      "raster_amostras": "/home/claude/projeto/exemplo/dados/amostras_total_2010_10classes.tif",
+      "poligonos_amostras": "/home/claude/projeto/exemplo/dados/amostras_2010.shp",
+      "coluna_classe_poligonos": "Classe",
+      "nomes_poligonos": {}
+    }
+  },
+  "cenarios": {
+    "C2_par_intensidade": {
+      "datas": {
+        "2007": {
+          "verossimilhanca": "/home/claude/projeto/exemplo/dados/likelihoods_2007_resampled.tif",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": "/home/claude/projeto/exemplo/dados/cloud_mask_2007.tif",
+          "validacao": {
+            "arquivo": "/home/claude/projeto/exemplo/dados/test_samples_2007.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        },
+        "2008": {
+          "verossimilhanca": "{resultados}/2008/verossimilhanca/par_intensidade.tif",
+          "tipo": "log",
+          "classes_bandas": null,
+          "mascara": null,
+          "validacao": {
+            "arquivo": "{resultados}/2008/amostras.gpkg",
+            "camada": "validacao",
+            "tipo": "pontos",
+            "coluna": "class_name"
+          },
+          "agregacao": "lvl_2"
+        },
+        "2009": {
+          "verossimilhanca": "/home/claude/projeto/exemplo/dados/likelihoods_2009_resampled.tif",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": null,
+          "validacao": {
+            "arquivo": "/home/claude/projeto/exemplo/dados/test_samples_2009.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        }
+      },
+      "transicoes": [
+        "/home/claude/projeto/exemplo/dados/2007-2008.txt",
+        "/home/claude/projeto/exemplo/dados/2008-2009.txt"
+      ],
+      "transicoes_com_rotulos": true
+    },
+    "C2_tabela_R": {
+      "datas": {
+        "2007": {
+          "verossimilhanca": "/home/claude/projeto/exemplo/dados/likelihoods_2007_resampled.tif",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": "/home/claude/projeto/exemplo/dados/cloud_mask_2007.tif",
+          "validacao": {
+            "arquivo": "/home/claude/projeto/exemplo/dados/test_samples_2007.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        },
+        "2008": {
+          "verossimilhanca": "{resultados}/2008/verossimilhanca/par_intensidade.tif",
+          "tipo": "log",
+          "classes_bandas": null,
+          "mascara": null,
+          "validacao": {
+            "arquivo": "{resultados}/2008/amostras.gpkg",
+            "camada": "validacao",
+            "tipo": "pontos",
+            "coluna": "class_name"
+          },
+          "agregacao": "lvl_2"
+        },
+        "2009": {
+          "verossimilhanca": "/home/claude/projeto/exemplo/dados/likelihoods_2009_resampled.tif",
+          "tipo": "direta",
+          "classes_bandas": [
+            "AG",
+            "VS3",
+            "SE",
+            "F",
+            "VS1",
+            "PA"
+          ],
+          "mascara": null,
+          "validacao": {
+            "arquivo": "/home/claude/projeto/exemplo/dados/test_samples_2009.shp",
+            "tipo": "poligonos",
+            "coluna": "DN",
+            "nomes": {
+              "1": "AG",
+              "2": "VS3",
+              "3": "SE",
+              "4": "F",
+              "5": "VS1",
+              "6": "PA"
+            }
+          },
+          "agregacao": null
+        }
+      },
+      "transicoes": null,
+      "transicoes_com_rotulos": true,
+      "tabela_trajetorias": "/home/claude/projeto/exemplo/dados/pesos_exemplo.txt"
+    }
+  }
+}

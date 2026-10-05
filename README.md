@@ -2,8 +2,8 @@
 
 ## Como usar
 
-1. Ajuste `config_projeto.json`: caminhos, **ordem das bandas** de cada imagem, classes e cenários. Itens marcados `CONFIRMAR` foram deduzidos dos scripts R.
-2. Para cada imagem SAR (altere `DATA`):
+1. Ajuste `config_projeto.json`: caminhos, **ordem das bandas** de cada imagem, classes e cenários.
+2. Para cada imagem (altere `DATA`):
    - `01_lags_amostragem.ipynb`: autocorrelação, lags e amostragem descorrelacionada;
    - `02_modelagem_classificacao.ipynb`: estatística, aderência, ENL, validação cruzada, representantes, verossimilhanças e MaxVer.
 3. Para cada cenário (altere `CENARIO`): `03_cmap_avaliacao.ipynb`, com CMAP, MaxVer, trajetórias impossíveis, discordância e acurácia por data.
@@ -40,4 +40,5 @@ São 5 arquivos por imagem, mais 1 por modelo, e 4 por cenário. Os scripts R gr
 
 ## Dependências
 
-`numpy`, `pandas`, `scipy`, `matplotlib`, `rasterio`, `geopandas`, `shapely`, `openpyxl`.
+`pip install -r requirements.txt` (versões testadas, Python 3.12). Para a pasta `testes/`, também é preciso o R com os pacotes listados no fim do arquivo.
+

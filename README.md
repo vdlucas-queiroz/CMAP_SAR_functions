@@ -1,4 +1,4 @@
-# Projeto CMAP — processamento em Python
+# Projeto CMAP - processamento em Python
 
 ## Como usar
 

@@ -27,7 +27,7 @@ Cada notebook começa por **uma única célula de parâmetros**. O código das c
     └── discordancia.tif               (opcional; também Trajectory_IDs.tif, Log_Posterior.tif)
 ```
 
-São 5 arquivos por imagem, mais 1 por modelo, e 4 por cenário. Os scripts R gravavam cerca de 40 arquivos por imagem. As figuras vão para um PDF por etapa (`SALVAR_FIGURAS = True`).
+São 5 arquivos por imagem, mais 1 por modelo, e 4 por cenário. As figuras vão para um PDF por etapa (`SALVAR_FIGURAS = True`).
 
 ## Pastas
 

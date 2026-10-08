@@ -62,15 +62,7 @@
         "HV",
         "HH"
       ],
-      "raster_amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/raster/amostras_total_2008_10classes_aligned.tif",
-      "poligonos_amostras": "CONFIRMAR: shapefile de polígonos de amostra de 2008 (não aparece nos scripts)",
-      "coluna_classe_poligonos": "Classe",
-      "nomes_poligonos": {
-        "CL": "AC",
-        "SS1": "VS1",
-        "SS2": "VS2",
-        "SS3": "VS3"
-      }
+      "amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/raster/amostras_total_2008_10classes_aligned.tif"
     },
     "2010": {
       "sensor": "SAR",
@@ -79,10 +71,9 @@
         "HH",
         "HV"
       ],
-      "raster_amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/raster/amostras_total_2010_10classes_aligned.TIF",
-      "poligonos_amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/Amostras/amostras_2010.shp",
-      "coluna_classe_poligonos": "Classe",
-      "nomes_poligonos": {
+      "amostras": "G:/Meu Drive/INPE/projeto_dissertacao/samples_design/reis_vec_samples/Amostras/amostras_2010.shp",
+      "coluna_classe": "Classe",
+      "nomes_classes": {
         "CL": "AC",
         "SS1": "VS1",
         "SS2": "VS2",

@@ -1,20 +1,68 @@
 {
   "raiz_resultados": "C:/cmap_python/resultados_python",
-  "classes": ["AP", "AC", "FD", "FP", "PL", "PS", "SE", "VS1", "VS2", "VS3"],
+  "classes": [
+    "AP",
+    "AC",
+    "FD",
+    "FP",
+    "PL",
+    "PS",
+    "SE",
+    "VS1",
+    "VS2",
+    "VS3"
+  ],
   "niveis_hierarquicos": {
-    "lvl_1": [["VS1", "VS2", "VS3"]],
-    "lvl_2": [["FP", "FD"], ["VS1", "VS2", "VS3"], ["AP", "AC"], ["PL", "PS"]]
+    "lvl_1": [
+      [
+        "VS1",
+        "VS2",
+        "VS3"
+      ]
+    ],
+    "lvl_2": [
+      [
+        "FP",
+        "FD"
+      ],
+      [
+        "VS1",
+        "VS2",
+        "VS3"
+      ],
+      [
+        "AP",
+        "AC"
+      ],
+      [
+        "PL",
+        "PS"
+      ]
+    ]
   },
-  "legenda_final": {"AP+AC": "AG", "PL+PS": "PA", "VS1+VS2+VS3": "VS", "FP+FD": "F", "SE": "SE"},
+  "legenda_final": {
+    "AP+AC": "AG",
+    "PL+PS": "PA",
+    "VS1+VS2+VS3": "VS",
+    "FP+FD": "F",
+    "SE": "SE"
+  },
   "imagens": {
     "2008": {
       "sensor": "SAR",
       "imagem": "C:/cmap_python/dados/PALSAR_2008_SDNLM_INTENSIDADE.tif",
-      "bandas": ["HH", "HV"],
-      "raster_amostras": "C:/cmap_python/dados/amostras_total_2008_10classes_aligned.tif",
-      "poligonos_amostras": "C:/cmap_python/dados/Amostras_2008.shp",
-      "coluna_classe_poligonos": "Classe",
-      "nomes_poligonos": {"CL": "AC", "SS1": "VS1", "SS2": "VS2", "SS3": "VS3"}
+      "bandas": [
+        "HH",
+        "HV"
+      ],
+      "amostras": "C:/cmap_python/dados/Amostras_2008.shp",
+      "coluna_classe": "Classe",
+      "nomes_classes": {
+        "CL": "AC",
+        "SS1": "VS1",
+        "SS2": "VS2",
+        "SS3": "VS3"
+      }
     }
   }
 }

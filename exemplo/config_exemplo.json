@@ -55,10 +55,9 @@
         "HV",
         "HH"
       ],
-      "raster_amostras": "/home/claude/projeto/exemplo/dados/amostras_total_2008_10classes.tif",
-      "poligonos_amostras": "/home/claude/projeto/exemplo/dados/amostras_2008.shp",
-      "coluna_classe_poligonos": "Classe",
-      "nomes_poligonos": {}
+      "amostras": "/home/claude/projeto/exemplo/dados/amostras_2008.shp",
+      "coluna_classe": "Classe",
+      "nomes_classes": {}
     },
     "2010": {
       "sensor": "SAR",
@@ -67,10 +66,7 @@
         "HH",
         "HV"
       ],
-      "raster_amostras": "/home/claude/projeto/exemplo/dados/amostras_total_2010_10classes.tif",
-      "poligonos_amostras": "/home/claude/projeto/exemplo/dados/amostras_2010.shp",
-      "coluna_classe_poligonos": "Classe",
-      "nomes_poligonos": {}
+      "amostras": "/home/claude/projeto/exemplo/dados/amostras_total_2010_10classes.tif"
     }
   },
   "cenarios": {

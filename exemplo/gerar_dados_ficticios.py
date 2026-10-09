@@ -107,11 +107,9 @@ cfg = {
     "legenda_final": {"AP+AC": "AG", "PL+PS": "PA", "VS1+VS2+VS3": "VS", "FP+FD": "F", "SE": "SE"},
     "imagens": {
         "2008": {"sensor": "SAR", "imagem": files['sar_2008'], "bandas": ["HV", "HH"],
-                 "raster_amostras": files['amostras_2008'], "poligonos_amostras": files['poligonos_2008'],
-                 "coluna_classe_poligonos": "Classe", "nomes_poligonos": {}},
+                 "amostras": files['poligonos_2008'], "coluna_classe": "Classe", "nomes_classes": {}},
         "2010": {"sensor": "SAR", "imagem": files['sar_2010'], "bandas": ["HH", "HV"],
-                 "raster_amostras": files['amostras_2010'], "poligonos_amostras": files['poligonos_2010'],
-                 "coluna_classe_poligonos": "Classe", "nomes_poligonos": {}}},
+                 "amostras": files['amostras_2010']}},
     "cenarios": {
         "C2_par_intensidade": {
             "datas": {
